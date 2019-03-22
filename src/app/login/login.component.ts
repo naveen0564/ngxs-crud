@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
   submitted = false;
-  invalidLogin = false;
+  invalidLogin:boolean = false;
   constructor(private formBuilder: FormBuilder, private router: Router, private authService: AuthenticationService) { }
 
   onSubmit() {
