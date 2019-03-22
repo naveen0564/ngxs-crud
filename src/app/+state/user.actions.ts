@@ -1,4 +1,4 @@
-import { User } from "../model/user.model";
+import { User } from '../model/user.model';
 
 export class AddUser {
     static readonly type = '[users] User Add ';
@@ -18,5 +18,5 @@ export class EditUser {
 
 export class DeleteUser {
     static readonly type = '[users]  User delete ';
-    constructor(public userId:number) { }
+    constructor(public userId: number) { }
 }

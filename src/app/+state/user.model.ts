@@ -1,6 +1,6 @@
-import { User } from "../model/user.model";
+import { User } from '../model/user.model';
 
 export interface UserStateModel {
-    users:User[],
-    errorMessage:string
+    users: User[];
+    errorMessage: string;
   }

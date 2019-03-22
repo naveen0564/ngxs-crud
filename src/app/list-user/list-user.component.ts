@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {UserService} from "../service/user.service";
-import {User} from "../model/user.model";
+import {Router} from '@angular/router';
+import {UserService} from '../service/user.service';
+import {User} from '../model/user.model';
 import { Store } from '@ngxs/store';
 import { LoadUsers, DeleteUser } from '../+state/user.actions';
 import { Observable } from 'rxjs';
@@ -14,15 +14,15 @@ import { Observable } from 'rxjs';
 export class ListUserComponent implements OnInit {
 
   users$: Observable<User[]>;
-  constructor(private store: Store,private router: Router, private userService: UserService) { 
+  constructor(private store: Store, private router: Router, private userService: UserService) {
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.users$ = this.store.select(state => state.users.users);
   }
 
   deleteUser(user: User): void {
-    this.store.dispatch(new DeleteUser(parseInt(user.id.toString())));
+    this.store.dispatch(new DeleteUser(parseInt(user.id.toString(), 10)));
   }
 
   editUser(user: User): void {
